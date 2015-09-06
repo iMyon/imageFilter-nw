@@ -1,0 +1,17 @@
+{
+  "name": "imageFilter",
+  "version": "0.0.1",
+  "window": {
+    "width": 560,
+    "height": 410,
+    "toolbar": false,
+    "always-on-top": true,
+    "resizable": false,
+    "icon": "image/icon.jpg"
+  },
+  "main": "index.html",
+  "private": true,
+  "dependencies": {
+    "image-size": "0.3.5"
+  }
+}

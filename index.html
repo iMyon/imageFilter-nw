@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ImageFilter</title>
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" href="bs3/css/bootstrap.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src='js/jquery-input-file-text.js'></script>
+    <script type="text/javascript" src="bs3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="js/doForm.js"></script>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="container">
+    		<div class="text-center">
+    			<h1>Filter Conditions</h1>
+    		</div>
+        <form class="form-horizontal" role="form" id="fm_filter">
+        		<div class="form-group">
+                <label class="col-xs-2 control-label">Folder</label>
+                <div class="col-xs-10" id="file-area">
+                	<input id="choose_folder" type="file" style="opacity:0;position:absolute;" nwdirectory>
+                	<input id="drag_folder" name="file" type="text" style="opacity:0;position:absolute;" nwdirectory>
+                	<span id="span-files" class="col-xs-11">Drag or select a folder into this window</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-2 control-label">Width</label>
+                <div class="col-xs-4">
+                	<select name="w_cmp_type" class="form-control">
+									  <option value="1">&gt;</option>
+									  <option value="2">=</option>
+									  <option value="3">&lt;</option>
+									</select>
+                </div>
+                <label class="col-xs-1 control-label"></label>
+								<div class="col-xs-5">
+                    <input name="width" type="number" class="form-control" id="" placeholder="input image's width" value="1440">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-2 control-label">Height</label>
+                <div class="col-xs-4">
+                	<select name="h_cmp_type" class="form-control">
+									  <option value="1">&gt;</option>
+									  <option value="2">=</option>
+									  <option value="3">&lt;</option>
+									</select>
+                </div>
+                <label class="col-xs-1 control-label"></label>
+								<div class="col-xs-5">
+                    <input name="height" type="number" class="form-control" id="" placeholder="input image's height" value="900">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-2 control-label"><input type="checkbox" name="opt_ratio" value="1" title="filter by ratio" />Ratio</label>
+                <div class="col-xs-4">
+                	<input name="ratio_width" type="number" class="form-control" id="" placeholder="image's width" value="1440">
+                </div>
+                <label class="col-xs-1 control-label">÷</label>
+								<div class="col-xs-5">
+                    <input name="ratio_height" type="number" class="form-control" id="" placeholder="image's height" value="900">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-2 control-label">Float</label>
+								<div class="col-xs-10">
+                    <input name="ratio_float" class="form-control" id="" placeholder="float value of ratio" value="0.1" title="float value of ratio">
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <div class="col-xs-offset-2 col-xs-2">
+                    <button id="sub_filter" type="submit" class="btn btn-primary">Start</button>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <div class="col-xs-offset-1 col-xs-5">
+                    <label id="label-result"><span id="match_count">0</span> mages matches</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
